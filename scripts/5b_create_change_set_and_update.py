@@ -1,8 +1,8 @@
 import json
-import datetime
 import ckanapi, json
 import math
 from urllib.request import Request, urlopen
+from datetime import datetime
 
 def updateDataset(datasetid,dataseries):
 	d = {"dataseries_name": dataseries, "id": datasetid}
@@ -22,7 +22,7 @@ def updateDataset(datasetid,dataseries):
 	else:
 		print('Fail')
 
-	print(datetime.datetime.now().time())
+	print(datetime.now().time())
 
 def removeDataset(datasetid,dataseries):
 	d = {"dataseries_name": dataseries, "id": datasetid}
@@ -70,7 +70,7 @@ def downloadCurrentState():
 	    packages = result["results"]
 	    print(packages)
 	    output  = output + packages
-	with open('../process_files/hdxMetaDataScrape_dataseries.json', 'w') as file:
+	with open('process_files/hdxMetaDataScrape_dataseries.json', 'w') as file:
 	    json.dump(output, file)
 
 def createLookUpFile(packages):
@@ -82,21 +82,35 @@ def createLookUpFile(packages):
 
 	return output2
 
+#file prefix
 
-targetFile = '../monthly_data_series/24-01-data_series.json'
+month = datetime.now().month
+year = datetime.now().year
+
+monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
+prevMonth = month-1
+prevYear = year
+if prevMonth == 0:
+	prevMonth = 12
+	prevYear = year-1
+prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
+
+
+
+targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
 
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
 
-with open('../keys/auth.json') as json_file:
+with open('keys/auth.json') as json_file:
 	authVar =  json.load(json_file)
 
 
 print(authVar['authtoken'])
 
-downloadCurrentState()
+#downloadCurrentState()
 
-with open('../process_files/hdxMetaDataScrape_dataseries.json', 'r') as file:
+with open('process_files/hdxMetaDataScrape_dataseries.json', 'r') as file:
 	packages = json.load(file)
 
 lookUp = createLookUpFile(packages)
@@ -121,11 +135,11 @@ for series in dataseries:
 				oldSeries = lookUp[dataset['id']]
 				if oldSeries != series['series']:
 					print('Updating series')
-					print(datetime.datetime.now().time())
+					print(datetime.now().time())
 					updateDataset(dataset['id'],series['series'])
 			else:
 				print('Updating series')
-				print(datetime.datetime.now().time())
+				print(datetime.now().time())
 				try:
 					updateDataset(dataset['id'],series['series'])
 				except:
