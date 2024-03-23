@@ -3,6 +3,7 @@ import ckanapi, json
 import math
 from urllib.request import Request, urlopen
 from datetime import datetime
+import os
 
 def updateDataset(datasetid,dataseries):
 	d = {"dataseries_name": dataseries, "id": datasetid}
