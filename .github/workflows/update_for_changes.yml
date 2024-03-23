@@ -21,12 +21,14 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run download and merge
       run: python scripts/4_merge_changes.py
-    - name: Update HDX for changes
-      run: python scripts/5b_create_change_set_and_update.py
-    - name: Create summary output
-      run: python scripts/6_data_series_summary.py
       env:
         credentials: ${{ secrets.GOOGLE_AUTH }}
+    - name: Update HDX for changes
+      run: python scripts/5b_create_change_set_and_update.py
+      env:
+        credentials: ${{ secrets.HDX_AUTH }}
+    - name: Create summary output
+      run: python scripts/6_data_series_summary.py
     - uses: stefanzweifel/git-auto-commit-action@v4
       name: Commit updated sources
       with:
