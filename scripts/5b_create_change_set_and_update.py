@@ -111,7 +111,7 @@ else:
 		authVar =  json.load(json_file)
 
 
-#downloadCurrentState()
+downloadCurrentState()
 
 with open('process_files/hdxMetaDataScrape_dataseries.json', 'r') as file:
 	packages = json.load(file)
