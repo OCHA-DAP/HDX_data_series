@@ -25,6 +25,8 @@ jobs:
         credentials: ${{ secrets.GOOGLE_AUTH }}
     - name: Update HDX for changes
       run: python scripts/5b_create_change_set_and_update.py
+      env:
+        credentials: ${{ secrets.HDX_AUTH }}
     - name: Create summary output
       run: python scripts/6_data_series_summary.py
     - uses: stefanzweifel/git-auto-commit-action@v4
