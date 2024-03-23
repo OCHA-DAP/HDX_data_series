@@ -43,7 +43,7 @@ def removeDataset(datasetid,dataseries):
 	else:
 		print('Fail')
 
-	print(datetime.datetime.now().time())
+	print(datetime.now().time())
 
 
 def downloadCurrentState():
