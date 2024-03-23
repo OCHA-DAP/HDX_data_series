@@ -104,17 +104,11 @@ with open(targetFile) as json_file:
 
 
 if "HDX_auth" in os.environ:
-		authVar = json.loads(os.environ['HDX_auth'])
-	else:
-		with open('keys/auth.json') as json_file:
-			authVar =  json.load(json_file)
+	authVar = json.loads(os.environ['HDX_auth'])
+else:
+	with open('keys/auth.json') as json_file:
+		authVar =  json.load(json_file)
 
-
-with open('keys/auth.json') as json_file:
-	authVar =  json.load(json_file)
-
-
-print(authVar['authtoken'])
 
 #downloadCurrentState()
 
