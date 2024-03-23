@@ -51,6 +51,7 @@ def highestDataseriesID(dataseries):
 	return maxID
 
 def signInGoogleSheets():
+	print(os.environ)
 	if "credentials" in os.environ:
 		credentials = json.loads(os.environ['credentials'])
 	else:
