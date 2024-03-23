@@ -27,9 +27,7 @@ jobs:
       run: python scripts/5b_create_change_set_and_update.py
       env:
         HDX_auth: ${{ secrets.HDX_AUTH }}
-    - name: Create summary output
-      run: python scripts/6_data_series_summary.py
     - uses: stefanzweifel/git-auto-commit-action@v4
       name: Commit updated sources
       with:
-        commit_message: automatic update of scrape
+        commit_message: updating for new data series
