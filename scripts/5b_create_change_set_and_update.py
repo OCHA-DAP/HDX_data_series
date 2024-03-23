@@ -102,6 +102,14 @@ targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
 with open(targetFile) as json_file:
 	dataseries = json.load(json_file)
 
+
+if "HDX_auth" in os.environ:
+		authVar = json.loads(os.environ['HDX_auth'])
+	else:
+		with open('keys/auth.json') as json_file:
+			authVar =  json.load(json_file)
+
+
 with open('keys/auth.json') as json_file:
 	authVar =  json.load(json_file)
 
