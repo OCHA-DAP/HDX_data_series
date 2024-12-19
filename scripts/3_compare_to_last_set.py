@@ -6,6 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 import gspread
 import os
+import time
 
 #file prefix
 
@@ -13,7 +14,12 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-prevMonth = month-1
+#prevMonth = month-1
+
+
+prevMonth = month-9
+
+
 prevYear = year
 if prevMonth == 0:
 	prevMonth = 12
@@ -148,6 +154,7 @@ def update_sheet(ws, rows, left=1, top=1):
 
     # update in batch
     ws.update_cells(cell_list,value_input_option='USER_ENTERED')
+    time.sleep(1.1)
 
 
 lastMonthFile = 'monthly_data_series/'+ prevMonthPrefix +'data_series.json'
@@ -159,13 +166,13 @@ files = os.listdir('monthly_data_series/')
 for file in files:
 	print(file)
 
-with open(lastMonthFile) as json_file:
+with open(lastMonthFile, encoding='utf-8') as json_file:
 	lastMonth = json.load(json_file)
 
-with open(thisMonthFile) as json_file:
+with open(thisMonthFile, encoding='utf-8') as json_file:
 	thisMonth = json.load(json_file)
 
-with open(lookUpFile) as json_file:
+with open(lookUpFile, encoding='utf-8') as json_file:
 	titleLookUp = json.load(json_file)
 
 datasetLookUp = createDataSetLookUp(lastMonth)
@@ -223,7 +230,7 @@ for candidateSeries in thisMonth:
 print('creating spreadsheets')
 
 
-destFolderId = '1vKD6HRabh1QQ52x15zGhW-NZZFzW5vbO'
+destFolderId = '1vKD6HRabh1QQ52x15zGhW-NZZFzW5vbO' # gdrive/Data Systems/Projects/Data Series
 title =  monthPrefix+'checks'
 
 service = signInGoogleDrive()

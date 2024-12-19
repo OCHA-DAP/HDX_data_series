@@ -2,6 +2,10 @@ import ckanapi, json
 import math
 import datetime
 from datetime import datetime
+import os
+from pathlib import Path
+
+print("Current working directory:", os.getcwd())
 
 #file prefix
 
@@ -47,7 +51,7 @@ result_total_count = result["count"]
 numOfFiles =  result["count"]
 #loops = int(math.ceil(numOfFiles/1000))
 output = []
-loops = 100
+loops = 26
 j=0
 
 for i in range(0, loops):
@@ -55,6 +59,16 @@ for i in range(0, loops):
     result = find_datasets(1000*i, 1000)
     packages = result["results"]
     output  = output + packages
+    print(f"Loop {i + 1} complete. Total datasets collected so far: {len(output)}", flush=True)  # Progress update
+
+
+print(f"Full Path: {Path('./process_files/HDXMetaDataScrape') / f'{monthPrefix}hdxMetaDataScrape.json'}")
+print(f"monthPrefix: {monthPrefix}")  # Check its value
+print(f"Final output length: {len(output)}")
+
+
+
+
 
 output = reduceMetaData(output)
 with open('process_files/HDXMetaDataScrape/'+monthPrefix+'hdxMetaDataScrape.json', 'w') as file:

@@ -4,34 +4,30 @@
 
 This script downloads the latest meta from HDX from which the clustering will be made. In addition it create a lookup file for getting the package name from a package ID used by later scripts.
 
-To run the script update the variable monthSuffix to the current month e.g. 'nov'
-
 Files created:
 
-1. working files/hdxMetaDataScrape_{month suffix}.json
-2. working files/package_title_look_up_{month suffix}.json
+1. process_files/HDXMetaDataScrape/{month prefix}hdxMetaDataScrape.json
+2. process_files/package_title_lookup/{month prefix}package_title_look_up.json
 
 2 - 2_tag_hash_analysis.py
 
 This script creates clusters which are data series from the latest meta data scrape
 
-To run the script update the variable monthSuffix to the current month e.g. 'nov'
-
 Input files:
-1. working files/hdxMetaDataScrape_{month suffix}.json
-2. working files/package_title_look_up_{month suffix}.json
+1. process_files/HDXMetaDataScrape/{month prefix}hdxMetaDataScrape.json
+2. process_files/package_title_lookup/{month prefix}package_title_look_up.json
 
 Files created:
-1. /working files/data_series_first_cluster_{month suffix}
+1. /process_files/initial_clustering/{month prefix}data_series_first_cluster
 
 3 - 3_compare_to_last_set.py
 
 This scripts compares the new clustering against the old clustering and creates change files for approval
 
 Input files:
-1. /working files/data_series_first_cluster_{month suffix}.json
-2. /monthly_data_series/data_series_{previous month suffix}.json
-3. /working files/package_title_lookup_{month suffix}.json
+1. /process_files/initial_clustering/{month prefix}data_series_first_cluster.json
+2. /monthly_data_series/{month prefix}data_series.json
+3. /process_files/package_title_lookup/{month prefix}package_title_lookup.json
 
 Files created:
 1. cods_{month suffix}.csv
@@ -42,18 +38,18 @@ Files created:
 4 - These files are exported to a google spreadsheet and then reviewed.  In the first coloumn indicate what action should be taken
 
 - matchedToOne_{month suffix}.csv
-Approved - adds to data set
-Exclude - add to data sets to be excluded
+Approved - adds to data series
+Exclude - add to list of data sets to be excluded (dataseries ID 0)
 
 - matchedToMany_{month suffix}.csv
 choose which data series for it to be added to in the match column. Delete the other IDs. Split the row into two if it matches two.  Ensure the dataset ID columns is split correctly
 
-Approved - adds to data set
-Exclude - add to data sets to be excluded
+Approved - adds to data series
+Exclude - add to data sets to be excluded (dataseries ID 0)
 
 - cods_{month suffix}.csv
-Approved - adds to data set
-Exclude - add to data sets to be excluded
+Approved - adds to data series
+Exclude - add to data sets to be excluded (dataseries ID 0)
 
 - new_{month suffix}.csv
 Create - add to data set

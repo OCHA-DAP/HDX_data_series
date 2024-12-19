@@ -5,7 +5,7 @@ import math
 import csv
 from urllib.request import Request, urlopen
 
-targetFile = '../monthly_data_series/24-01-data_series.json'
+targetFile = '../monthly_data_series/24-0-data_series.json'
 
 url = 'https://data.humdata.org/dataset?dataseries_name='
 
