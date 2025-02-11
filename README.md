@@ -42,7 +42,7 @@ Approved - adds to data series
 Exclude - add to list of data sets to be excluded (dataseries ID 0)
 
 - matchedToMany_{month suffix}.csv
-choose which data series for it to be added to in the match column. Delete the other IDs. Split the row into two if it matches two.  Ensure the dataset ID columns is split correctly
+The concatenated 'Data series ID' values must be split to separate rows (i.e. only one data series id is allowed per row) and with the desired dataset ids concatenated in the corresponding 'Dataset Names' column (i.e. multiple dataset ids are allowed in this column). The 'Dataset Names' column is only for convenience and does not need to be split.
 
 Approved - adds to data series
 Exclude - add to data sets to be excluded (dataseries ID 0)
@@ -57,13 +57,6 @@ Move to another file and leave as approved
 
 5 - 4_merge_changes.py
 
-Download the 4 spreadsheets for google drive as CSV and rename
-
-Input files:
-1. {month}_cods_approved.csv
-2. {month}_matchedToMany_approved.csv
-3. {month}_matchedToOne_approved.csv
-4. {month}_new_approved.csv
-
+All sheets will be downloaded from gsheet and saved as separate CSV in ./process_files/csv_outputs/yy-mm/  
 Files created:
-data_series_{month suffix}
+1. ./monthly_data_series/yy-mm-dataseries.json

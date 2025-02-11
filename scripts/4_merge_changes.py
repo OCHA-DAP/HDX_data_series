@@ -19,6 +19,12 @@ if prevMonth == 0:
 	prevYear = year-1
 prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
 
+#overrides for when not working in the correct month
+month = 12
+monthPrefix = '24-12-'
+prevMonth = 11
+prevMonthPrefix = '24-03-'
+
 
 #change these
 lastFile = f'monthly_data_series/{prevMonthPrefix}data_series.json'
@@ -66,6 +72,7 @@ def signInGoogleSheets():
 def downloadGoogleSheets():
 	title =  monthPrefix+'checks'
 	gc = signInGoogleSheets()
+	print(title)
 	sh = gc.open(title)
 
 	sheets = sh.worksheets()
@@ -85,17 +92,17 @@ def downloadGoogleSheets():
 			changeFiles.append(fileDir+fileName)
 		if 'new' in sheet.title:
 			newFiles.append(fileDir+fileName)
-		with open(fileDir+fileName, 'w') as f:
+		with open(fileDir+fileName, 'w', newline='', encoding='utf-8') as f:
 		    writer = csv.writer(f)
 		    writer.writerows(sheet.get_all_values())
 	return [changeFiles,newFiles]
 
 [changeFiles,newFiles] = downloadGoogleSheets()
 
-with open(lastFile) as json_file:
-	dataseries = json.load(json_file)
+with open(lastFile, encoding='utf-8') as json_file:
+	dataseries = json.load(json_file,)
 
-with open(packageLookupFile) as json_file:
+with open(packageLookupFile, encoding='utf-8') as json_file:
 	packageLookup = json.load(json_file)
 
 for file in changeFiles:

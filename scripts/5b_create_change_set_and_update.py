@@ -1,3 +1,5 @@
+from IPython import embed
+
 import json
 import ckanapi, json
 import math
@@ -15,6 +17,7 @@ def updateDataset(datasetid,dataseries):
 
 	req.add_header('Content-Type', 'application/json')
 	req.add_header('Authorization', authVar['authtoken'])
+	req.add_header('User-Agent', 'HDXINTERNAL:DataSeries/Python-urllib/3.9')
 
 	response_dict = json.loads(urlopen(req, data).read())
 	
@@ -35,6 +38,7 @@ def removeDataset(datasetid,dataseries):
 
 	req.add_header('Content-Type', 'application/json')
 	req.add_header('Authorization', authVar['authtoken'])
+	req.add_header('User-Agent', 'HDXINTERNAL:DataSeries/Python-urllib/3.9')
 
 	response_dict = json.loads(urlopen(req, data).read())
 	
@@ -66,12 +70,12 @@ def downloadCurrentState():
 	loops = 100
 	j=0
 	for i in range(0, loops):
-	    print(i)
+	    print(f'Getting packages from ckan. Loop {i}')
 	    result = find_datasets(1000*i, 1000)
 	    packages = result["results"]
-	    print(packages)
+	    #print(packages)
 	    output  = output + packages
-	with open('process_files/hdxMetaDataScrape_dataseries.json', 'w') as file:
+	with open('process_files/hdxMetaDataScrape_dataseries.json', 'w', encoding='utf-8') as file:
 	    json.dump(output, file)
 
 def createLookUpFile(packages):
@@ -84,7 +88,6 @@ def createLookUpFile(packages):
 	return output2
 
 #file prefix
-
 month = datetime.now().month
 year = datetime.now().year
 
@@ -96,59 +99,64 @@ if prevMonth == 0:
 	prevYear = year-1
 prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
 
-
+#overrides for when not working in the correct month
+month = 12
+monthPrefix = '24-12-'
+prevMonth = 11
+prevMonthPrefix = '24-03-'
 
 targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
 
-with open(targetFile) as json_file:
+with open(targetFile, encoding='utf-8') as json_file:
 	dataseries = json.load(json_file)
-
 
 if "HDX_auth" in os.environ:
 	authVar = json.loads(os.environ['HDX_auth'])
 else:
-	with open('keys/auth.json') as json_file:
+	with open('keys/auth.json', encoding='utf-8') as json_file:
 		authVar =  json.load(json_file)
 
+# Deactivate the line below to use the existing (presumably recent) copy of the current state to avoid the long process of downloading all packages
+#downloadCurrentState()
 
-downloadCurrentState()
 
-with open('process_files/hdxMetaDataScrape_dataseries.json', 'r') as file:
+
+with open('process_files/hdxMetaDataScrape_dataseries.json', 'r', encoding='utf-8') as file:
 	packages = json.load(file)
 
 lookUp = createLookUpFile(packages)
 
 index =0
 
+# embed()
+
 
 ## data series to be added/changed
 for series in dataseries:
+	print(f'Starting data series index {index}. ID is {series["id"]}.')
 	for dataset in series['datasets']:
 		if index>0 and series['type']=='excluded':
-			print(index)
 			if dataset['id'] in lookUp: 
 				oldSeries = lookUp[dataset['id']]
 				if oldSeries != series['series']:
-					print('removing dataset')
-					print(dataset)
+					print('======= REMOVING DATASET FROM SERIES =======')
 					removeDataset(dataset['id'],None)
 		if index>0 and series['type']=='data series':
-			print(index)
 			if dataset['id'] in lookUp: 
 				oldSeries = lookUp[dataset['id']]
 				if oldSeries != series['series']:
-					print('Updating series')
-					print(datetime.now().time())
+					print('======= MOVING DATASET TO DIFFERENT SERIES =======')
+					# print(datetime.now().time())
 					updateDataset(dataset['id'],series['series'])
 			else:
-				print('Updating series')
-				print(datetime.now().time())
+				print('======= ADDING DATASET TO SERIES =======')
+				# print(datetime.now().time())
 				try:
 					updateDataset(dataset['id'],series['series'])
 				except:
 					print('404 in updating')
 			
-		index = index+1
+	index = index+1
 
 #data series to be removed
 
@@ -157,8 +165,9 @@ for series in dataseries:
 		if dataset['id'] in lookUp:
 			del lookUp[dataset['id']]
 
-for dataset in lookUp:
-	print('removing dataset')
-	print(dataset)
-	removeDataset(dataset['id'],None)
+# this section is not currently working
+# for dataset in lookUp:
+# 	print('removing dataset')
+# 	print(dataset)
+# 	removeDataset(dataset['id'],None)
 
