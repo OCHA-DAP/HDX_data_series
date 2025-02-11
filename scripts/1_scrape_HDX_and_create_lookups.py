@@ -40,7 +40,7 @@ CKAN_URL = "https://data.humdata.org"
 """Base URL for the CKAN instance."""
 
 def find_datasets(start, rows):
-    """Return a page of HXL datasets."""
+    """Return a page of HDX datasets."""
     return ckan.action.package_search(start=start, rows=rows)
 
 # Open a connection to HDX
@@ -51,7 +51,7 @@ result_total_count = result["count"]
 numOfFiles =  result["count"]
 #loops = int(math.ceil(numOfFiles/1000))
 output = []
-loops = 26
+loops = 30
 j=0
 
 for i in range(0, loops):

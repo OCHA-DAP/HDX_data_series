@@ -2,7 +2,7 @@
 
 1 - 1_scrape_HDX_and_create_lookups.py
 
-This script downloads the latest meta from HDX from which the clustering will be made. In addition it create a lookup file for getting the package name from a package ID used by later scripts.
+This script downloads the latest meta from HDX from which the clustering will be made. In addition it creates a lookup file for getting the package name from a package ID used by later scripts.
 
 Files created:
 

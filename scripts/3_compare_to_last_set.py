@@ -14,11 +14,7 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-#prevMonth = month-1
-
-
-prevMonth = month-9
-
+prevMonth = month-1
 
 prevYear = year
 if prevMonth == 0:
