@@ -12,7 +12,7 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-prevMonth = month-2  # FIX THIS AFTER FEB RUN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+prevMonth = month-1
 prevYear = year
 if prevMonth == 0:
 	prevMonth = 12
@@ -111,11 +111,11 @@ for file in changeFiles:
 		reader = csv.reader(csvfile)
 		next(reader)
 		for row in reader:
-			if row[0]=='Approved' or row[0]=='Exclude':
+			if row[0] in(['Approve','Approved']) or row[0] in(['Exclude','Excluded']):
 				dataseriesID = row[6]
 				if dataseriesID[0:5] == 'none|':
 					dataseriesID = dataseriesID[5:]
-				if row[0]=='Exclude':
+				if row[0] in(['Exclude','Excluded']):
 					dataseriesID = 0
 				print(dataseriesID)
 				datasets = row[7].split('|')
@@ -137,7 +137,7 @@ for file in newFiles:
 			if index == 0:
 				if row[0]=='clean' or row[0]=='Clean':
 					series['type']='clean'
-				if row[0]=='exclude' or row[0]=='Exclude':
+				if row[0] in(['Exclude','Excluded']):
 					exclude = True
 				series['series'] = row[0]
 			if index>1:

@@ -3317,6 +3317,50 @@
                 "key": "Zambia - Administrative Boundaries"
             },
             {
+                "id": "ba450607-7fb1-48e0-a612-a02397c2718a",
+                "key": "Satellite detected water extents between 01 and 05 February 2025 over South Sudan"
+            },
+            {
+                "id": "bc775742-d5a3-4aba-b361-9247c90f4a00",
+                "key": "Satellite detected water extents between 18 and 22 January 2025 over South Sudan"
+            },
+            {
+                "id": "21002251-f740-43b9-9f4f-40232a2e57b5",
+                "key": "Extensão de água detectada por satélite nos Distritos de Mossuril e Ilha de Moçambique, Província de Nampula, Moçambique, no dia 18 de janeiro de 2025"
+            },
+            {
+                "id": "67b1919e-81cd-4468-9456-c33fb18e1115",
+                "key": "Satellite detected water extents between 04 and 08 January 2025 over South Sudan"
+            },
+            {
+                "id": "378e2de9-8487-43c3-8aca-f2e60ed6162c",
+                "key": "Satellite detected water extent in White Nile State, Sudan as of 1 January 2025"
+            },
+            {
+                "id": "3d41360e-7f6c-45a0-b8c3-a35b0932ca02",
+                "key": "Satellite detected water extent in Khartoum and White Nile States, Sudan as of 1 January 2025"
+            },
+            {
+                "id": "e8734223-dc45-4d6b-8566-0792c01aabed",
+                "key": "Satellite detected water extents between 14 and 18 December 2024 over South Sudan"
+            },
+            {
+                "id": "efa0781f-e9f1-436a-8b54-2ee06ca8a7cb",
+                "key": "Satellite detected water extents between 08 and 12 December 2024 over South Sudan"
+            },
+            {
+                "id": "a7778b20-487c-4a87-b8bb-46b18ac34ea8",
+                "key": "UNOSAT - FAO Gaza Strip Greenhouse Comprehensive Damage Assessment - December 2024"
+            },
+            {
+                "id": "d30bbcb5-c21a-49ec-a692-43356a17dc2c",
+                "key": "UNOSAT - FAO Gaza Strip Cropland Damage Assessment - December 2024"
+            },
+            {
+                "id": "f917361f-26bc-4e30-b61c-ddbdc30bfe8f",
+                "key": "UNOSAT Gaza Strip Comprehensive Damage Assessment - 01 December 2024"
+            },
+            {
                 "id": "36b96580-9203-4d94-9423-a73cb5bdc1ad",
                 "key": "Zimbabwe - Joint Assessment - 2023"
             },
@@ -9666,6 +9710,18 @@
             {
                 "id": "3ac9b527-dff2-4b9f-a16e-476aa821896a",
                 "name": "Myanmar - Subnational Administrative Boundaries"
+            },
+            {
+                "id": "f7b918d3-9633-4142-8ae5-2358ca87ff3f",
+                "key": "North Macedonia - Subnational Administrative Boundaries"
+            },
+            {
+                "id": "3833e807-7be1-48de-a961-07de2d750086",
+                "key": "Greece - Subnational Administrative Boundaries"
+            },
+            {
+                "id": "d74086a0-f398-4474-9e12-1b9a70907bd0",
+                "key": "Türkiye - Subnational Administrative Boundaries"
             }
         ],
         "count": 115,
@@ -10271,6 +10327,30 @@
             {
                 "id": "79484094-6e4a-4fbd-9152-66b42a9b32e0",
                 "name": "Afghanistan - Subnational Population Statistics"
+            },
+            {
+                "id": "46773d0a-b049-4407-8c75-e79821d8d297",
+                "key": "Palau - Subnational Population Statistics"
+            },
+            {
+                "id": "06282dc6-97c7-49c0-8634-410f19a4208d",
+                "key": "Tokelau - Subnational Population Statistics"
+            },
+            {
+                "id": "4f40ced2-b095-4489-bd1c-52e785ed6c2f",
+                "key": "Saudi Arabia - Subnational Population Statistics"
+            },
+            {
+                "id": "46773d0a-b049-4407-8c75-e79821d8d297",
+                "key": "Palau - Subnational Population Statistics"
+            },
+            {
+                "id": "06282dc6-97c7-49c0-8634-410f19a4208d",
+                "key": "Tokelau - Subnational Population Statistics"
+            },
+            {
+                "id": "4f40ced2-b095-4489-bd1c-52e785ed6c2f",
+                "key": "Saudi Arabia - Subnational Population Statistics"
             },
             {
                 "id": "27e3d1c6-c57a-4159-85a4-adb6b7aca6b9",
@@ -61722,6 +61802,18 @@
             {
                 "id": "e9034679-0075-4f83-93d7-00b816aa941b",
                 "name": "Pakistan - 2023 HBL Cash Distribution Monitoring Assessment - 2023"
+            },
+            {
+                "id": "ecb55fe3-8fd6-4e30-9a9d-c2e017405c57",
+                "key": "Bulgaria - Post-Distribution Monitoring of Cash-Based Interventions - 2024"
+            },
+            {
+                "id": "213af3e6-f38f-4d51-bdae-54f8b3ab7737",
+                "key": "Bulgaria - Post-Distribution Monitoring of Cash-Based Interventions - 2025"
+            },
+            {
+                "id": "80bc6189-2da4-41a4-ae18-4d65e6c08cfa",
+                "key": "Bulgaria - Post-Distribution Monitoring of Cash-Based Interventions - 2023"
             }
         ],
         "count": 22,
@@ -77831,6 +77923,26 @@
             {
                 "id": "8326ed53-8f3a-47f9-a2aa-83ab4ecee476",
                 "name": "Global Humanitarian Programme Cycle, Humanitarian Needs"
+            },
+            {
+                "id": "0ea5e9cd-4c46-499d-9c31-f53e9315d6db",
+                "key": "Venezuela (Bolivarian Republic of): Humanitarian Needs"
+            },
+            {
+                "id": "9a31ab38-1cc0-45a1-9520-dba48299e56d",
+                "key": "El Salvador: Humanitarian Needs"
+            },
+            {
+                "id": "68b69d4c-a965-405e-8ed2-b7b5c7d64689",
+                "key": "Honduras: Humanitarian Needs"
+            },
+            {
+                "id": "be942acf-afc3-4fa6-8387-fabcec33888d",
+                "key": "Guatemala: Humanitarian Needs"
+            },
+            {
+                "id": "d5a68479-9c34-490e-850a-5329ef056662",
+                "key": "Burkina Faso:  Humanitarian Needs"
             }
         ],
         "count": 7,
@@ -81422,6 +81534,22 @@
             {
                 "id": "335743dd-f27f-4382-9586-c5bfdf281aa0",
                 "name": "GRID3 COD - Settlement Extents v3.1"
+            },
+            {
+                "id": "7e2e3431-4359-4ba0-a4a4-9ebabe8350d4",
+                "key": "Nigeria - Settlements"
+            },
+            {
+                "id": "8141ce56-f13e-4ed8-a7b5-fabd16ae4d5b",
+                "key": "GRID3 São Tomé and Príncipe Settlement Extents, Version 02"
+            },
+            {
+                "id": "4a61738a-5ac3-4d94-9e9d-4cd25a5c803a",
+                "key": "GRID3 The Gambia Settlement Extents, Version 02"
+            },
+            {
+                "id": "72a3f80d-109e-4507-a1e0-3d53952d4f6b",
+                "key": "GRID3 Central African Republic Settlement Extents, Version 02"
             }
         ],
         "count": 1,
@@ -83205,6 +83333,62 @@
             {
                 "id": "4c79c0f7-9293-479e-a874-9d03de9287ec",
                 "name": "Iraq - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "ca18aa52-f12d-468d-8a8b-2616821fcc49",
+                "key": "Uganda - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "64ddad48-0b8a-4b2f-b97d-056a010c5da7",
+                "key": "Mongolia - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "7e2aa982-5439-4fe9-b852-f9943dcb9118",
+                "key": "Philippines - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "b265afd2-239d-4899-afaf-cbf6a60db84e",
+                "key": "Mexico - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "45ad3eac-8fc0-458e-89a4-51dc8cde016d",
+                "key": "Colombia - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "a0d46e62-c045-4963-b060-61284e3dad3c",
+                "key": "Algeria - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "95cdfadd-c68e-4c58-aaae-8192eca95580",
+                "key": "Iran (Islamic Republic of) - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "64ddad48-0b8a-4b2f-b97d-056a010c5da7",
+                "key": "Mongolia - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "7e2aa982-5439-4fe9-b852-f9943dcb9118",
+                "key": "Philippines - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "b265afd2-239d-4899-afaf-cbf6a60db84e",
+                "key": "Mexico - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "45ad3eac-8fc0-458e-89a4-51dc8cde016d",
+                "key": "Colombia - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "53753c1f-7695-419b-932f-6f167e2f4358",
+                "key": "Syrian Arab Republic - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "a0d46e62-c045-4963-b060-61284e3dad3c",
+                "key": "Algeria - Internal Displacements Updates (IDU) (event data)"
+            },
+            {
+                "id": "95cdfadd-c68e-4c58-aaae-8192eca95580",
+                "key": "Iran (Islamic Republic of) - Internal Displacements Updates (IDU) (event data)"
             }
         ],
         "count": 1,
@@ -83341,6 +83525,42 @@
             {
                 "id": "1bdc3e19-65bc-4d2f-a2af-bbcdcba1e166",
                 "name": "Multi-Sector Needs Assessment (MSNA) - 2023"
+            },
+            {
+                "id": "b8325566-d729-4d2f-8bc6-03ce3c9415f5",
+                "key": "Republic of Moldova - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "ac6da3d6-0bb0-41ea-982f-b782400f4ebc",
+                "key": "Lithuania - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "d8618043-3104-469e-b26f-d02309dbfdd5",
+                "key": "Latvia - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "33a40b37-60c9-49ca-910b-3413dfa6b36c",
+                "key": "Hungary - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "e629a309-2e17-4853-900f-3058fcef2231",
+                "key": "Slovakia - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "93b356ce-8cd8-4e9a-ba5b-2c39b8866912",
+                "key": "Bulgaria - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "1a3a3060-8b43-48c0-8cd5-67f55630a8e5",
+                "key": "Estonia - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "987e159b-2937-4c39-a3d7-f8cac4249633",
+                "key": "Romania - Socio-Economic Insights Survey (SEIS) - 2024"
+            },
+            {
+                "id": "da151e11-8964-4741-9f69-39f528cec4d3",
+                "key": "Czechia - Socio-Economic Insights Survey (SEIS) - 2024"
             }
         ],
         "count": 1,
@@ -83753,6 +83973,10 @@
             {
                 "id": "f6b91534-494c-45b1-97a4-cd01bafb4e72",
                 "name": "Peace and Security Pillar: Actual number of personnel in peacekeeping missions"
+            },
+            {
+                "id": "4a911951-0b72-4d15-b221-ba5ff820224b",
+                "key": "Peace and Security Pillar: Conduct and Discipline: Sexual Exploitation and Abuse Data"
             }
         ],
         "count": 1,
@@ -84989,6 +85213,10 @@
             {
                 "id": "fd39432d-e0c7-49f8-b729-682229d01bb8",
                 "name": "HDX HAPI Data for Guatemala"
+            },
+            {
+                "id": "0039a481-ced4-48e2-9e41-d046bc1842ee",
+                "key": "HDX HAPI Data for Malawi"
             }
         ],
         "count": 8,
@@ -85385,6 +85613,42 @@
             {
                 "id": "74e25e2a-cd19-4524-a142-d04051dc638d",
                 "name": "Zimbabwe Walking Travel Time to nearest Level IV health centre"
+            },
+            {
+                "id": "7d86e8ca-07be-44fa-b82e-1f7107c703da",
+                "key": "Democratic Republic of the Congo Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "80ea2956-d146-4cc0-94f9-384c525cd130",
+                "key": "Zimbabwe Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "3780d7d0-04d2-4bcc-af93-9996d03fd361",
+                "key": "Zambia Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "8602aea9-825d-42a3-8573-6defd3c863f0",
+                "key": "United Republic of Tanzania Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "27c5f824-b690-41ca-9b03-9905e47edf67",
+                "key": "South Africa Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "562cf3e2-7745-4376-8a14-224357446f3c",
+                "key": "Namibia Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "11cecc72-21b1-450d-b547-6aae0ab5b3b6",
+                "key": "Mozambique Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "946c4b91-e99d-4e49-b2a4-c0e855f66af0",
+                "key": "Kenya Motorised Travel Time (in seconds) to nearest health centre"
+            },
+            {
+                "id": "2f6760ec-d7b4-4405-bc9b-c97d59d52dc7",
+                "key": "Botswana Motorised Travel Time (in seconds) to nearest health centre"
             }
         ],
         "count": 8,
@@ -85921,6 +86185,14 @@
             {
                 "id": "6fbce9ed-74f9-49a2-a737-e19148906616",
                 "name": "Colombia - High Frequency Survey - Q1 2023"
+            },
+            {
+                "id": "5d4f04b9-8a7c-4293-a1ec-f65d58e26763",
+                "key": "Jordan - Socio-Economic Survey on Refugees in Host Communities - Vulnerability Assessment Framework (VAF), 2024"
+            },
+            {
+                "id": "f4771229-383e-422b-92c2-13742176eda8",
+                "key": "Jordan - Socio-Economic Survey on Refugees in Camps - Vulnerability Assessment Framework (VAF), 2024"
             }
         ],
         "count": 8,
