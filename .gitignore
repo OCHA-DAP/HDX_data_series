@@ -14,3 +14,16 @@ process_files/hdxMetaDataScrape_aug.json
 process_files/hdxMetaDataScrape.json
 keys/auth.json
 process_files/hdxMetaDataScrape_dataseries.json
+cod-elevation_undo-1.csv
+cod-elevation_undo.csv
+cod-hydrology_undo.csv
+cod-infrastructure_undo.csv
+cod-popplaces_undo.csv
+elevation.csv
+hotosm-popplaces_undo.csv
+output2process-1.csv
+output2process-2.csv
+output2process-3.csv
+output2process.csv
+scripts/5b_create_change_set_and_update.py
+TEST.ipynb

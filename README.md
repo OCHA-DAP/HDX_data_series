@@ -38,22 +38,23 @@ Files created:
 4 - These files are exported to a google spreadsheet and then reviewed.  In the first coloumn indicate what action should be taken
 
 - matchedToOne_{month suffix}.csv
-Approved - adds to data series
+Approved - adds to data series. Need to make sure only one value in "Data series ID" column.
 Exclude - add to list of data sets to be excluded (dataseries ID 0)
 
 - matchedToMany_{month suffix}.csv
-The concatenated 'Data series ID' values must be split to separate rows (i.e. only one data series id is allowed per row) and with the desired dataset ids concatenated in the corresponding 'Dataset Names' column (i.e. multiple dataset ids are allowed in this column). The 'Dataset Names' column is only for convenience and does not need to be split.
+The concatenated 'Data series ID' values must be split to separate rows (i.e. only one data series id is allowed per row) and with the desired dataset ids concatenated in the corresponding 'Dataset Names' column (i.e. multiple dataset ids are allowed in this column). The 'Key' column should have only one value: 'data series' or 'excluded'. The 'Dataset Names' column is only for convenience and does not need to be split.
 
 Approved - adds to data series
-Exclude - add to data sets to be excluded (dataseries ID 0)
+Exclude - add to data sets to be excluded (dataseries ID = 0)
 
 - cods_{month suffix}.csv
-Approved - adds to data series
-Exclude - add to data sets to be excluded (dataseries ID 0)
+Approved - adds to data series. For AB, set 'Data series ID' to 12. For PS, set 'Data series ID' to 13.
+Exclude - add to data sets to be excluded (dataseries ID = 0)
 
 - new_{month suffix}.csv
-Create - add to data set
-Move to another file and leave as approved
+Add the desired data series name in cell A1 to create a new series. 
+To prevent datasets from being included, delete them from the list.
+To ignore this tab completely, delete it from the gsheet. If the sheet remains and cell A1 is empty, then a new no-name dataseries is created in the json file (not sure if that can make it's way to HDX or not).
 
 5 - 4_merge_changes.py
 
