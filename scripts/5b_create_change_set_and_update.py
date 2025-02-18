@@ -92,7 +92,7 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-prevMonth = month-1
+prevMonth = month-2 # FIX THIS AFTER FEB RUN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 prevYear = year
 if prevMonth == 0:
 	prevMonth = 12
@@ -100,12 +100,15 @@ if prevMonth == 0:
 prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
 
 #overrides for when not working in the correct month
-month = 12
-monthPrefix = '24-12-'
-prevMonth = 11
-prevMonthPrefix = '24-03-'
+# month = 12
+# monthPrefix = '24-12-'
+# prevMonth = 11
+# prevMonthPrefix = '24-03-'
 
 targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
+
+print(f'monthPrefix is {monthPrefix}.')
+print(f'prevMonthPrefix is {prevMonthPrefix}.')
 
 with open(targetFile, encoding='utf-8') as json_file:
 	dataseries = json.load(json_file)
@@ -116,19 +119,19 @@ else:
 	with open('keys/auth.json', encoding='utf-8') as json_file:
 		authVar =  json.load(json_file)
 
+
+
 # Deactivate the line below to use the existing (presumably recent) copy of the current state to avoid the long process of downloading all packages
-#downloadCurrentState()
-
-
+# downloadCurrentState()
 
 with open('process_files/hdxMetaDataScrape_dataseries.json', 'r', encoding='utf-8') as file:
 	packages = json.load(file)
 
 lookUp = createLookUpFile(packages)
 
-index =0
+index = 0
 
-# embed()
+#embed()
 
 
 ## data series to be added/changed
@@ -148,6 +151,8 @@ for series in dataseries:
 					print('======= MOVING DATASET TO DIFFERENT SERIES =======')
 					# print(datetime.now().time())
 					updateDataset(dataset['id'],series['series'])
+				elif oldSeries == series['series']:
+					print('====== LEAVING DATASET IN SAME SERIES ======')
 			else:
 				print('======= ADDING DATASET TO SERIES =======')
 				# print(datetime.now().time())
