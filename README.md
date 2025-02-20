@@ -59,5 +59,14 @@ To ignore this tab completely, delete it from the gsheet. If the sheet remains a
 5 - 4_merge_changes.py
 
 All sheets will be downloaded from gsheet and saved as separate CSV in ./process_files/csv_outputs/yy-mm/  
+
 Files created:
 1. ./monthly_data_series/yy-mm-dataseries.json
+
+6 - 5b_create_change_set_and_update.py
+
+This file compares the current state of HDX (it downloads all metadata for public datasets), with the yy-mm-dataseries.json generated in the previous step and decides what kind of update to make. 
+
+TODO: This script tries to update any deleted or private datasets that are in the json (from past runs). To the script, they appear to be new (i.e. they are not assigned to a dataseries because their metadata is not in the package metadata download which is limited to only public datasets), but they appear in the json because they are grandfathered in from previous runs. So the script performs an update to all of them. This are many like this and it makes the update slow. A future improvement would be to include deleted/private datasets in the "current state" download so they they would be skipped.
+
+The remaining scrips (6, 7, 8) are utilties and not run as part of the monthly update.
