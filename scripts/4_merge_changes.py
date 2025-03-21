@@ -26,7 +26,7 @@ prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
 # prevMonthPrefix = '24-03-'
 
 
-#change these
+
 lastFile = f'monthly_data_series/{prevMonthPrefix}data_series.json'
 targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
 packageLookupFile = f'process_files/package_title_lookup/{monthPrefix}package_title_lookup.json'

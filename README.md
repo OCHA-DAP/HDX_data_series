@@ -1,6 +1,6 @@
 # HDX_data_series
 
-1 - 1_scrape_HDX_and_create_lookups.py
+1 - .\scripts\1_scrape_HDX_and_create_lookups.py
 
 This script downloads the latest meta from HDX from which the clustering will be made. In addition it creates a lookup file for getting the package name from a package ID used by later scripts.
 
@@ -63,10 +63,11 @@ All sheets will be downloaded from gsheet and saved as separate CSV in ./process
 Files created:
 1. ./monthly_data_series/yy-mm-dataseries.json
 
-6 - 5b_create_change_set_and_update.py
+6 - 5b_create_change_set_and_update.py (note that script 5a was an initial setup script is should no longer be needed)
 
 This file compares the current state of HDX (it downloads all metadata for public datasets), with the yy-mm-dataseries.json generated in the previous step and decides what kind of update to make. 
 
-TODO: This script tries to update any deleted or private datasets that are in the json (from past runs). To the script, they appear to be new (i.e. they are not assigned to a dataseries because their metadata is not in the package metadata download which is limited to only public datasets), but they appear in the json because they are grandfathered in from previous runs. So the script performs an update to all of them. This are many like this and it makes the update slow. A future improvement would be to include deleted/private datasets in the "current state" download so they they would be skipped.
+TODO: This script tries to update any deleted or private datasets that are in the json (from past runs). To the script, they appear to be new (i.e. they are not assigned to a dataseries because their metadata is not in the package metadata download which is limited to only public datasets), but they appear in the json because they are grandfathered in from previous runs. So the script performs an update to all of them. This are many like this and it makes the update slow. A future improvement would be to include deleted/private datasets in the "current state" download so they they would be skipped. This also means that deleted datasets are in some data series (example: https://data.humdata.org/dataset/d5188a72-05f5-407e-b852-17da5ad71e31), which probably should be cleaned up.
+
 
 The remaining scrips (6, 7, 8) are utilties and not run as part of the monthly update.

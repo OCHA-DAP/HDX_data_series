@@ -92,7 +92,7 @@ month = datetime.now().month
 year = datetime.now().year
 
 monthPrefix = str(year)[2:4]+'-'+str(month).zfill(2)+'-'
-prevMonth = month-2 # FIX THIS AFTER FEB RUN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+prevMonth = month-1
 prevYear = year
 if prevMonth == 0:
 	prevMonth = 12
@@ -122,7 +122,7 @@ else:
 
 
 # Deactivate the line below to use the existing (presumably recent) copy of the current state to avoid the long process of downloading all packages
-# downloadCurrentState()
+downloadCurrentState()
 
 with open('process_files/hdxMetaDataScrape_dataseries.json', 'r', encoding='utf-8') as file:
 	packages = json.load(file)
