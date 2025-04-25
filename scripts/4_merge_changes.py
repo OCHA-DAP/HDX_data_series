@@ -146,7 +146,7 @@ for file in newFiles:
 				else:
 					series['datasets'].append({'id':row[0],'key':row[1]})
 			index= index+1
-		series['count'] = len(datasets)
+		series['count'] = len(series['datasets'])
 		dataseries.append(series) 
 
 with open(targetFile, 'w', encoding='utf-8') as f:

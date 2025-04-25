@@ -70,13 +70,13 @@ def downloadCurrentState():
 	loops = 100
 	j=0
 	for i in range(0, loops):
-	    print(f'Getting packages from ckan. Loop {i}')
-	    result = find_datasets(1000*i, 1000)
-	    packages = result["results"]
-	    #print(packages)
-	    output  = output + packages
+		print(f'Getting packages from ckan. Loop {i}')
+		result = find_datasets(1000*i, 1000)
+		packages = result["results"]
+		#print(packages)
+		output  = output + packages
 	with open('process_files/hdxMetaDataScrape_dataseries.json', 'w', encoding='utf-8') as file:
-	    json.dump(output, file)
+		json.dump(output, file)
 
 def createLookUpFile(packages):
 

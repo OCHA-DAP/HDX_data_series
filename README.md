@@ -35,26 +35,28 @@ Files created:
 3. matchedToOne_{month suffix}.csv
 4. new_{month suffix}.csv
 
-4 - These files are exported to a google spreadsheet and then reviewed.  In the first coloumn indicate what action should be taken
+4 - These files are exported to a google spreadsheet and then reviewed by DPT. DON'T FORGET TO GIVE THEM EDIT ACCESS. In the first column OF THE GOOGLE SHEETS indicate what action should be taken:
 
-- matchedToOne_{month suffix}.csv
-Approved - adds to data series. Need to make sure only one value in "Data series ID" column.
-Exclude - add to list of data sets to be excluded (dataseries ID 0)
+- matchedToOne_{month suffix}
+In the 'Action' column indicate:
+Approved (case sensitive) - adds to data series. Need to make sure only one value in "Data series ID" column.
+Exclude (case sensitive) - add to list of data sets to be excluded (dataseries ID 0, but you don't need to put that in the data series id column - just the "Exclude" in the first column is enough.)
 
-- matchedToMany_{month suffix}.csv
-The concatenated 'Data series ID' values must be split to separate rows (i.e. only one data series id is allowed per row) and with the desired dataset ids concatenated in the corresponding 'Dataset Names' column (i.e. multiple dataset ids are allowed in this column). The 'Key' column should have only one value: 'data series' or 'excluded'. The 'Dataset Names' column is only for convenience and does not need to be split.
+- matchedToMany_{month suffix}
+In the 'Action' column indicate:
+Approved (case sensitive) - adds to data series. Need to make sure only one value in "Data series ID" column.
+Exclude (case sensitive) - add to list of data sets to be excluded (dataseries ID 0, but you don't need to put that in the data series id column - just the "Exclude" in the first column is enough.)
+The concatenated 'Data series ID' values must be split to separate rows (i.e. only one data series id is allowed per row) and with the desired dataset ids concatenated in the corresponding 'Dataset Names' column (i.e. multiple dataset ids are allowed in this column, and all of them will be part of the Data Series in the 'Data Series ID' column). The other columns are only for convenience and does not need to be split.
 
-Approved - adds to data series
-Exclude - add to data sets to be excluded (dataseries ID = 0)
+- cods_{month suffix}
+In the 'Action' column indicate:
+Approved (case sensitive) - adds to data series. For AB, set 'Data series ID' to 12. For PS, set 'Data series ID' to 13.
+Exclude (case sensitive) - add to data sets to be excluded (dataseries ID = 0)
 
-- cods_{month suffix}.csv
-Approved - adds to data series. For AB, set 'Data series ID' to 12. For PS, set 'Data series ID' to 13.
-Exclude - add to data sets to be excluded (dataseries ID = 0)
-
-- new_{month suffix}.csv
+- new_{sequential number}
 Add the desired data series name in cell A1 to create a new series. 
 To prevent datasets from being included, delete them from the list.
-To ignore this tab completely, delete it from the gsheet. If the sheet remains and cell A1 is empty, then a new no-name dataseries is created in the json file (not sure if that can make it's way to HDX or not).
+To ignore this tab completely, delete it from the gsheet. If the sheet remains and cell A1 is empty, then a new no-name dataseries is created in the json file, and I believe these are not created in CKAN.
 
 5 - 4_merge_changes.py
 
@@ -62,6 +64,7 @@ All sheets will be downloaded from gsheet and saved as separate CSV in ./process
 
 Files created:
 1. ./monthly_data_series/yy-mm-dataseries.json
+This file has the complete "desired end state" for data series on HDX, including newly added datasets as well as everything that has come before. You can check in this file (by dataset id) that everything in the gsheets is ending up where you want it to be.
 
 6 - 5b_create_change_set_and_update.py (note that script 5a was an initial setup script is should no longer be needed)
 

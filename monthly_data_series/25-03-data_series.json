@@ -58020,9 +58020,41 @@
             {
                 "id": "41d08b93-2d19-40cf-9bb4-b81ebd83e2f1",
                 "name": "Dominican Republic - High Frequency Survey - Q4 2020"
+            },
+            {
+                "id": "9076dc49-88eb-4b78-ba19-11e760e35abd",
+                "name": "Colombia - High Frequency Survey - Q3 2023"
+            },
+            {
+                "id": "93e36a1d-b17e-4c93-87e8-6e7b06a5c55f",
+                "name": "Colombia - High Frequency Survey - Q4 2023"
+            },
+            {
+                "id": "07188d69-80bc-4619-be56-c66323cb9420",
+                "name": "Colombia - High Frequency Survey - Q2 2024"
+            },
+            {
+                "id": "251af339-8e7f-4774-8053-6f4d04e4b2e7",
+                "name": "Colombia - High Frequency Survey - Q1 2024"
+            },
+            {
+                "id": "9ec4608d-7ee8-4c6f-8e6c-e9c6b14beddf",
+                "name": "Colombia - High Frequency Survey - Q2 2023"
+            },
+            {
+                "id": "6fbce9ed-74f9-49a2-a737-e19148906616",
+                "name": "Colombia - High Frequency Survey - Q1 2023"
+            },
+            {
+                "id": "5d4f04b9-8a7c-4293-a1ec-f65d58e26763",
+                "key": "Jordan - Socio-Economic Survey on Refugees in Host Communities - Vulnerability Assessment Framework (VAF), 2024"
+            },
+            {
+                "id": "f4771229-383e-422b-92c2-13742176eda8",
+                "key": "Jordan - Socio-Economic Survey on Refugees in Camps - Vulnerability Assessment Framework (VAF), 2024"
             }
         ],
-        "count": 43,
+        "count": 51,
         "type": "data series"
     },
     {
@@ -86273,46 +86305,6 @@
             {
                 "id": "9c685b80-e710-4982-83f0-b91ecc494315",
                 "name": "Height-for-age <-2 SD (Stunting) Modeled Estimates, Numbers Affected"
-            }
-        ],
-        "count": 8,
-        "type": "data series"
-    },
-    {
-        "id": 304,
-        "series": "UNHCR - The UN Refugee Agency High Frequency Surveys",
-        "datasets": [
-            {
-                "id": "9076dc49-88eb-4b78-ba19-11e760e35abd",
-                "name": "Colombia - High Frequency Survey - Q3 2023"
-            },
-            {
-                "id": "93e36a1d-b17e-4c93-87e8-6e7b06a5c55f",
-                "name": "Colombia - High Frequency Survey - Q4 2023"
-            },
-            {
-                "id": "07188d69-80bc-4619-be56-c66323cb9420",
-                "name": "Colombia - High Frequency Survey - Q2 2024"
-            },
-            {
-                "id": "251af339-8e7f-4774-8053-6f4d04e4b2e7",
-                "name": "Colombia - High Frequency Survey - Q1 2024"
-            },
-            {
-                "id": "9ec4608d-7ee8-4c6f-8e6c-e9c6b14beddf",
-                "name": "Colombia - High Frequency Survey - Q2 2023"
-            },
-            {
-                "id": "6fbce9ed-74f9-49a2-a737-e19148906616",
-                "name": "Colombia - High Frequency Survey - Q1 2023"
-            },
-            {
-                "id": "5d4f04b9-8a7c-4293-a1ec-f65d58e26763",
-                "key": "Jordan - Socio-Economic Survey on Refugees in Host Communities - Vulnerability Assessment Framework (VAF), 2024"
-            },
-            {
-                "id": "f4771229-383e-422b-92c2-13742176eda8",
-                "key": "Jordan - Socio-Economic Survey on Refugees in Camps - Vulnerability Assessment Framework (VAF), 2024"
             }
         ],
         "count": 8,
