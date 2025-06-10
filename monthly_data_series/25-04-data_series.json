@@ -29945,6 +29945,46 @@
         "row": 27,
         "datasets": [
             {
+            "id": "e6e32bcd-decc-46c1-859a-e773b32fd108",
+            "name": "highresolutionpopulationdensitymaps-bdi"
+            },
+            {
+            "id": "dcdd6035-b29a-4e6a-8fc4-286ec68bdea1",
+            "name": "highresolutionpopulationdensitymaps-cmr"
+            },
+            {
+            "id": "0ac92efb-7ec8-44cb-a443-0be3bb781cc4",
+            "name": "highresolutionpopulationdensitymaps-tun"
+            },
+            {
+            "id": "0645fa18-489a-4516-8221-91f5c134935b",
+            "name": "saint-kitts-and-nevis-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
+            "id": "abc4f0c3-6ab3-449c-a497-8aa7cd14566b",
+            "name": "american-samoa-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
+            "id": "51bd8e7b-b7a2-4efa-8f1f-7e2361633945",
+            "name": "ireland-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
+            "id": "dd6ae158-e35b-45e2-8eb8-dca248b8c3d6",
+            "name": "turkey-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
+            "id": "c846d97b-4363-469a-b66b-1ac2674913b0",
+            "name": "denmark-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
+            "id": "9191a9b8-e241-42e8-bd1d-19891b8f3bcf",
+            "name": "nauru-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
+            "id": "ea1d4259-040c-40bd-b1b3-eee9caadf9d3",
+            "name": "pitcairn-islands-high-resolution-population-density-maps-demographic-estimates"
+            },
+            {
                 "id": "cf175051-1680-4ae1-adff-ba6a59b5f4ba",
                 "name": "Suriname: High Resolution Population Density Maps + Demographic Estimates"
             },
