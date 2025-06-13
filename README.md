@@ -35,7 +35,7 @@ Files created:
 3. matchedToOne_{month suffix}.csv
 4. new_{month suffix}.csv
 
-4 - These files are exported to a google spreadsheet and then reviewed by DPT. DON'T FORGET TO GIVE THEM EDIT ACCESS. In the first column OF THE GOOGLE SHEETS indicate what action should be taken:
+4 - IN GDrive: the above files will have been exported to a google spreadsheet and in this step are reviewed by DPT. DON'T FORGET TO GIVE THEM EDIT ACCESS. In the first column OF THE GOOGLE SHEETS indicate what action should be taken:
 
 - matchedToOne_{month suffix}
 In the 'Action' column indicate:
