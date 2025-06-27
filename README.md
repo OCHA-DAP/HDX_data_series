@@ -39,7 +39,7 @@ Files created:
 
 - matchedToOne_{month suffix}
 In the 'Action' column indicate:
-Approved (case sensitive) - adds to data series. Need to make sure only one value in "Data series ID" column.
+Approved (case sensitive) - adds to data series. In the "Data Series ID" column, the "none" will be ignored and the only other data series ID will be used.
 Exclude (case sensitive) - add to list of data sets to be excluded (dataseries ID 0, but you don't need to put that in the data series id column - just the "Exclude" in the first column is enough.)
 
 - matchedToMany_{month suffix}

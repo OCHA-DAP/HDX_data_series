@@ -121,7 +121,7 @@ else:
 
 
 
-# Deactivate the line below to use the existing (presumably recent) copy of the current state to avoid the long process of downloading all packages
+# Comment out the line below to use the existing (presumably recent) copy of the current state to avoid the long process of downloading all packages
 downloadCurrentState()
 
 with open('process_files/hdxMetaDataScrape_dataseries.json', 'r', encoding='utf-8') as file:
