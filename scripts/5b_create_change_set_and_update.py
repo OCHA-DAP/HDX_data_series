@@ -99,11 +99,12 @@ if prevMonth == 0:
 	prevYear = year-1
 prevMonthPrefix = str(prevYear)[2:4]+'-'+str(prevMonth).zfill(2)+'-'
 
+
 #overrides for when not working in the correct month
-# month = 12
-# monthPrefix = '24-12-'
-# prevMonth = 11
-# prevMonthPrefix = '24-03-'
+month = 10
+monthPrefix = '25-10-'
+prevMonth = 9
+prevMonthPrefix = '25-09-'
 
 targetFile = f'monthly_data_series/{monthPrefix}data_series.json'
 
